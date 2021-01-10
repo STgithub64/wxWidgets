@@ -309,6 +309,7 @@ public:
 
     /**
         Return the opaque pointer for the tool at the given coordinates.
+        The coordinates passed must be relative to the toolbar's parent.
 
         @return an opaque pointer, NULL if is not found.
 
@@ -392,7 +393,7 @@ public:
 
     /**
         Returns the rect in the toolbar, or a default-constructed rect if the tool
-        is not found.
+        is not found. The rect's coordinates are relative to the toolbar's parent.
 
         @param tool_id
             ID of the tool in question, as passed to AddTool().
